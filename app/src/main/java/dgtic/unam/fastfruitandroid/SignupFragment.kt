@@ -85,7 +85,7 @@ class SignupFragment : Fragment(R.layout.fragment_signup) {
     }
 
     private fun showHome(email: String, provider: ProviderType) {
-        val homeIntent = Intent(requireContext(), MainActivity::class.java).apply {
+        val homeIntent = Intent(requireContext(), MainActivity ::class.java).apply {
             putExtra("email", email)
             putExtra("provider", provider.name)
         }

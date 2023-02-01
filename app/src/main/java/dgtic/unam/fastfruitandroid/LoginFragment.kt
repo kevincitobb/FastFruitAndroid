@@ -107,5 +107,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         // Se asigna una bandera que indique se queda limpio el stack de activities
         homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(homeIntent)
+
     }
 }
+

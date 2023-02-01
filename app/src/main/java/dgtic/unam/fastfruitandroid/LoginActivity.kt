@@ -1,5 +1,6 @@
 package dgtic.unam.fastfruitandroid
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -86,7 +87,7 @@ class LoginActivity : AppCompatActivity() {
         Log.e("email", email)
 
         // Se asigna una bandera que indique se queda limpio el stack de activities
-        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(homeIntent)
     }
 

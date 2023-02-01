@@ -1,8 +1,9 @@
 package dgtic.unam.fastfruitandroid
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dgtic.unam.fastfruitandroid.databinding.ActivitySplashBinding
 import kotlin.concurrent.thread
 

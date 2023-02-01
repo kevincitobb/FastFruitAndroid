@@ -14,18 +14,16 @@ import dgtic.unam.fastfruitandroid.databinding.ActivityMainBinding
 
 
 enum class ProviderType {
-    BASIC,
-    GOOGLE,
-    FACEBOOK
+    BASIC
 }
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
     private var foodTypes = mutableListOf("Todos","Likes", "Verduras", "Frutas", "Otros")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
 
         val foodList = FoodListSingleton.getInstance().foodList
@@ -49,6 +47,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 // Recoge la selección del usuario en el spinner
                 val selectedItem = binding.spCat.selectedItem.toString()
                 // Filtra la lista de alimentos en base a la selección
+                binding.tvCat.text = selectedItem
                 val filteredFoodList = when {
                     selectedItem == "Todos" -> foodList
                     selectedItem == "Likes" -> foodList.filter { it.liked }
@@ -67,10 +66,13 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        val email = intent.getStringExtra("email")
+
         return when (item.itemId) {
             R.id.home_item -> {
                 if (this !is MainActivity) {
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("email", email)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                     startActivity(intent)
                 }
@@ -78,7 +80,9 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
             R.id.cart_item -> {
                 if (javaClass != CartActivity::class.java) {
+
                     val intent = Intent(this, CartActivity::class.java)
+                    intent.putExtra("email", email)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                     startActivity(intent)
                 }
@@ -87,6 +91,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.user_item -> {
                 if (javaClass != AccountActivity::class.java) {
                     val intent = Intent(this, AccountActivity::class.java)
+                    intent.putExtra("email", email)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                     startActivity(intent)
                 }

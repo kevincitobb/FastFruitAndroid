@@ -30,4 +30,27 @@
     <string name="ht_password">La contraseña no es valida</string>
     <string name="btn_signup">Crear cuenta</string>
     <string name="btn_login_alt">Inicia sesión</string>
+    <string name="direcciones">Direcciones:</string>
+    <string name="ejemplocorreo">lalalalal@xmail.com</string>
+    <string name="e_mailtv">E-mail:</string>
+    <string name="nombretv">Nombre:</string>
+    <string name="nombreejemplo">LoremIpsum</string>
+    <string name="agregarbtn">Agregar</string>
+    <string name="userimageejemplo">userimage</string>
+    <string name="carritoimagen">carrito</string>
+    <string name="carritotitle">Carrito</string>
+    <string name="total">total</string>
+    <string name="totaltv">Total:</string>
+    <string name="comprarbtn">Comprar</string>
+    <string name="spiner_perron">categorias</string>
+    <string name="logo">Logo</string>
+    <string name="Precio">$6.05</string>
+    <string name="NombreProducto">Tomate</string>
+    <string name="imagenfood">imagenfood</string>
+    <string name="likebtn">likebtn</string>
+    <string name="adbtn">adbtn</string>
+    <string name="lessbtn">lessbtn</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="cantidad1">1</string>
+    <string name="direc">TextView</string>
 </resources>

@@ -49,7 +49,7 @@ class FoodAdapter(private val FoodList: List<Food>) : RecyclerView.Adapter<FoodA
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val foodImage: ImageView = itemView.findViewById(R.id.food_image)
+        val foodImage: ImageView = itemView.findViewById(R.id.food_image1)
         val price: TextView = itemView.findViewById(R.id.price)
         val restaurantName: TextView = itemView.findViewById(R.id.restaurant_name)
         val likeImage: ImageView = itemView.findViewById(R.id.imageView4)
