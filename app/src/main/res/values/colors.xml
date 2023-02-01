@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF8C33</color>
+    <color name="icon">#EE7124</color>
+    <color name="main">#FFEAC9</color>
+    <color name="secondary">#84E7FD</color>
+    <color name="tertiary">#53F298</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Error">#FE0000</color>
+    <color name="gradient" > <gradient startColor="@color/primary" endColor="@color/main"/> </color>
+
+</resources>
