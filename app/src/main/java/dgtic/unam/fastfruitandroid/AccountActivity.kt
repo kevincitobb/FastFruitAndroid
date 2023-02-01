@@ -12,7 +12,9 @@ class AccountActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIt
 
     private lateinit var binding: ActivityAccountBinding
     private var direcList = ArrayList<Direc>()
-
+    init {
+        direcList.add(Direc("LoremIpsumLoremIpsum"))
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAccountBinding.inflate(layoutInflater)
